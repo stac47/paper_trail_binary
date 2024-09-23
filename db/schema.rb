@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_23_135860) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_23_140228) do
   create_table "versions", force: :cascade do |t|
     t.string "whodunnit"
     t.datetime "created_at"
@@ -20,5 +20,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_23_135860) do
     t.text "object", limit: 1073741823
     t.text "object_changes", limit: 1073741823
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+  end
+
+  create_table "widgets", force: :cascade do |t|
+    t.binary "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 end
