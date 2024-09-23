@@ -24,3 +24,5 @@ group :development, :test do
 end
 
 
+
+gem "paper_trail", "~> 15.2"
